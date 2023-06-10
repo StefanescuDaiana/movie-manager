@@ -1,0 +1,40 @@
+<mat-card class="card-container">
+  <mat-card-content>
+    <form class="data-form">
+      <mat-form-field class="input-full-width">
+        <mat-label> Title</mat-label>
+        <input type="text" matInput [formControl]="titleFormControl" placeholder="Avatar">
+        <mat-error *ngIf="titleFormControl.hasError('required')">
+          Title is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input-full-width">
+        <mat-label>Director</mat-label>
+        <input type="text" matInput [formControl]="directorFormControl">
+        <mat-error *ngIf="directorFormControl.hasError('required')">
+          Director is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input-full-width">
+        <mat-label>Year</mat-label>
+        <input type="text" matInput [formControl]="yearFormControl">
+        <mat-error *ngIf="yearFormControl.hasError('required')">
+          Year is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="input-full-width">
+        <mat-label>Description</mat-label>
+        <input type="text" matInput [formControl]="descriptionFormControl">
+        <mat-error *ngIf="yearFormControl.hasError('required')">
+          Description is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </form>
+
+    <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+
+  </mat-card-content>
+</mat-card>
