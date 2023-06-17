@@ -1,3 +1,6 @@
-<app-create-edit-movie>
+<app-create-edit-movie></app-create-edit-movie>
 
-</app-create-edit-movie>
+<div *ngFor="let item of movieList">
+  <app-movie-review [movie]="item" (onChange)="refreshList()" ></app-movie-review>
+
+</div>

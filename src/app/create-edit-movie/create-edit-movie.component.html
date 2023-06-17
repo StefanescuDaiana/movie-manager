@@ -1,38 +1,38 @@
 <mat-card class="card-container">
   <mat-card-content>
-    <form class="data-form">
+    <div [formGroup]="movieFormGroup"  class="data-form">
       <mat-form-field class="input-full-width">
         <mat-label> Title</mat-label>
-        <input type="text" matInput [formControl]="titleFormControl" placeholder="Avatar">
-        <mat-error *ngIf="titleFormControl.hasError('required')">
+        <input type="text" matInput formControlName ="titleFormControl" placeholder="Avatar">
+        <mat-error *ngIf="movieFormGroup.controls['titleFormControl'].hasError('required')">
           Title is <strong>required</strong>
         </mat-error>
       </mat-form-field>
 
       <mat-form-field class="input-full-width">
         <mat-label>Director</mat-label>
-        <input type="text" matInput [formControl]="directorFormControl">
-        <mat-error *ngIf="directorFormControl.hasError('required')">
+        <input type="text" matInput formControlName ="directorFormControl">
+        <mat-error *ngIf="movieFormGroup.controls['directorFormControl'].hasError('required')">
           Director is <strong>required</strong>
         </mat-error>
       </mat-form-field>
 
       <mat-form-field class="input-full-width">
         <mat-label>Year</mat-label>
-        <input type="text" matInput [formControl]="yearFormControl">
-        <mat-error *ngIf="yearFormControl.hasError('required')">
+        <input type="text" matInput formControlName ="yearFormControl">
+        <mat-error *ngIf="movieFormGroup.controls['yearFormControl'].hasError('required')">
           Year is <strong>required</strong>
         </mat-error>
       </mat-form-field>
 
       <mat-form-field class="input-full-width">
         <mat-label>Description</mat-label>
-        <input type="text" matInput [formControl]="descriptionFormControl">
-        <mat-error *ngIf="yearFormControl.hasError('required')">
+        <input type="text" matInput formControlNam ="descriptionFormControl">
+        <mat-error *ngIf="movieFormGroup.controls['descriptionFormControl'].hasError('required')">
           Description is <strong>required</strong>
         </mat-error>
       </mat-form-field>
-    </form>
+    </div>
 
     <button mat-raised-button color="primary" (click)="onSave()">Save</button>
 

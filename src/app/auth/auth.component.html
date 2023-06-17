@@ -1,7 +1,7 @@
 <div class="div-container" [ngSwitch]="viewType">
 <mat-card class="card-container" *ngSwitchCase="'login'">
   <mat-card-content>
-    <form class="data-form">
+    <div class="data-form">
       <mat-form-field class="input-full-width">
         <mat-label>Email</mat-label>
         <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
@@ -20,7 +20,7 @@
           Password is <strong>required</strong>
         </mat-error>
       </mat-form-field>
-    </form>
+    </div>
 
     <button mat-raised-button color="primary" (click)="onLogin()">Log in</button>
     <button mat-button color="primary" (click)="onViewChange()">Create an account?</button>
@@ -30,7 +30,7 @@
 
 <mat-card class="card-container" *ngSwitchCase="'register'">
   <mat-card-content>
-    <form class="data-form">
+    <div class="data-form">
       <mat-form-field class="input-full-width">
         <mat-label>Email</mat-label>
         <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
@@ -57,7 +57,7 @@
           Password is <strong>required</strong>
         </mat-error>
       </mat-form-field>
-    </form>
+    </div>
 
     <button mat-raised-button color="primary" (click)="onRegister()">Register</button>
     <button mat-button color="primary" (click)="onViewChange()">Back to log in</button>

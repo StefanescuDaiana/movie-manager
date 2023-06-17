@@ -1,0 +1,12 @@
+.movie-card{
+  background-color: darkcyan;
+  margin: 16px;
+  padding: 16px;
+  max-width: 400px;
+}
+
+.movie-title{
+  font-size: 18px;
+  font-family: "Comic Sans MS";
+  font-weight: bold;
+}
